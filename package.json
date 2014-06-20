@@ -1,0 +1,27 @@
+{
+  "name": "coffee-yo",
+  "version": "0.0.1",
+  "description": "Trigger Yo notification when coffee is ready",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dermike/coffee-yo.git"
+  },
+  "author": "Mikael Jergefelt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dermike/coffee-yo/issues"
+  },
+  "homepage": "https://github.com/dermike/coffee-yo",
+  "devDependencies": {
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^0.3.4",
+    "gulp-uglify": "^0.3.0",
+    "gulp-concat-css": "^0.1.4",
+    "gulp": "^3.8.1",
+    "gulp-uncss": "^0.4.4"
+  }
+}
