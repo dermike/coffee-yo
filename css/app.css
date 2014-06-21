@@ -1,0 +1,33 @@
+#yo {
+  height: 300px;
+  width: 420px;
+  max-width: 100%;
+  padding: 1em;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+}
+
+.button {
+  background-color: #870052;
+}
+
+.button:hover, .button:focus, .button:disabled {
+  background-color: #875552;
+}
+
+.sent {
+  background-color: green !important;
+}
+
+.expand {
+  display: block;
+  width: 100%;
+}
+
+#status {
+  font-size: 12px;
+}
