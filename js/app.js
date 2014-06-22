@@ -46,8 +46,11 @@ CoffeeYo.prototype.send = function(button) {
       if (data.error) {
       	$('#status').html('Error: ' + data.error);
       	self.buttonState('normal');
-      } else {
+      } else if (data.result === "OK") {
         self.buttonState('success');
+      } else {
+        $('#status').html('Unknown error');
+        self.buttonState('normal');        
       }
     },
     error: function(e) {
