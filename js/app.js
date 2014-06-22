@@ -43,7 +43,6 @@ CoffeeYo.prototype.send = function(button) {
     dataType: 'json',
     contentType: 'application/json',
     success: function(data) {
-      console.log(data);
       if (data.error) {
       	$('#status').html('Error: ' + data.error);
       	self.buttonState('normal');
