@@ -8,8 +8,8 @@ var uncss = require('gulp-uncss'),
 gulp.task('css', function() {
   gulp.src(['bower_components/foundation/css/foundation.css', 'css/app.css'])
     .pipe(uncss({
-      html: ['index.html'], // Saved from full copy of DOM
-      ignore: ['.button', '.expand', '.sent']
+      html: ['index.html'],
+      ignore: ['.button', '.expand', '.sent', '#status']
     }))
     .pipe(concatCss("app.min.css"))
     .pipe(minifycss())
