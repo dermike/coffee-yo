@@ -1,13 +1,18 @@
 <?php
-  header('Content-Type: application/json');
-  $url = 'http://api.justyo.co/yoall/';
-  $apikey = 'api_token=';
-
-  $c = curl_init($url);
-  curl_setopt($c, CURLOPT_POST, true);
-  curl_setopt($c, CURLOPT_POSTFIELDS, $apikey);
-  curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
-  $response = curl_exec($c);
-  curl_close($c);
-  echo $response;
+header('Content-Type: application/json');
+$postdata = http_build_query(
+  array(
+    'api_token' => 'api-token-goes-here'
+  )
+);
+$opts = array('http' =>
+  array(
+    'method'  => 'POST',
+    'header'  => 'Content-type: application/x-www-form-urlencoded',
+    'content' => $postdata
+  )
+);
+$context  = stream_context_create($opts);
+$result = file_get_contents('http://api.justyo.co/yoall/', false, $context);
+echo $result;
 ?>
