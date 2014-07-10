@@ -28,6 +28,7 @@ CoffeeYo.prototype.buttonState = function(state) {
     case 'success':
       // does not re-enable button, page needs to be reloaded to be able to send again
       $('#yobutton').addClass('sent').html(this.options.buttonSentText);
+      $('#status').html('');
       break;
     case 'normal':
       $('#yobutton').removeAttr('disabled').html(this.options.buttonText);
