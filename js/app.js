@@ -43,6 +43,7 @@ CoffeeYo.prototype.send = function(button) {
     url: 'yo.php',
     dataType: 'json',
     contentType: 'application/json',
+    cache: false,
     success: function(data) {
       self.buttonState('success');
     },
